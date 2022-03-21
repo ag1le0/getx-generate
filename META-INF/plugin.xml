@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>com.magic.plugin.getxgenerate</id>
+  <name>GetX Template Generator</name>
+  <version>1.0.2</version>
+  <vendor email="nguhoangictu@gmail.com" url="http://www.fb.com/htngu.99">Hoang Trieu Ngu</vendor>
+
+  <description><![CDATA[
+      Tools support generate getx template file, only work on Flutter project<br>
+      <h1>How to use?</h1>
+      <li>Step 1: Open your Flutter project</li>
+      <li>Step 2: Right click on any file or folder in your project structure (or select File) -> New -> GetX Generator </li>
+      <li>Enter name you want to create</li>
+      <li>Click OK</li>
+      <li>Wait a few moment, don't hurry</li>
+      <li>All done!</li>
+      <h1>Contact</h1>
+    	<li>FB: fb.com/htngu.99</li>
+    	<li>Email: nguhoangictu@gmail.com</li>
+    ]]></description>
+  <change-notes><![CDATA[
+      <li>1.0 - First revision.</li>
+      <li>1.0.1 - Convert UpperCamelCase name to underscore name with long name file</li>
+      <li>1.0.2 - Stop generate Provider and Repository file, change GetWidget to GetView</li>
+    ]]>
+  </change-notes>
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="GetXgenerate.generate" class="GetXGenerate" text="GetX Generator">
+      <add-to-group group-id="NewGroup" anchor="first"/>
+    </action>
+  </actions>
+</idea-plugin>
